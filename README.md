@@ -58,41 +58,6 @@ flowchart TD
     E -->|Yes| G["TDP(): Differential Phase Test<br/>Test whether a gene that shows rhythmicity<br/>across all conditions has differential phase<br/>across conditions."]
 ```
 
-## Quick start
-
-```r
-library(CARhy)
-
-set.seed(1)
-period <- 24
-
-# Six sampling times with three replicates at each time point
-time_vec <- rep(c(2, 6, 10, 14, 18, 22), each = 3)
-
-# Simulate expression data for eight genes
-amp <- c(1.2, 1.0, 0.8, 0.6, 0, 0, 0.4, 0.2)
-phi <- c(2, 4, 6, 8, 0, 0, 10, 12)
-mesor <- 1
-
-expr <- t(sapply(seq_along(amp), function(i) {
-  mesor + amp[i] * cos(2 * pi * (time_vec - phi[i]) / period) +
-    rnorm(length(time_vec), 0, 0.2)
-}))
-rownames(expr) <- paste0("gene", seq_along(amp))
-colnames(expr) <- paste0("Time ", time_vec, ", rep ", rep(1:3, times = 6))
-
-# Test rhythmicity within one condition
-TR_res <- TR(expr, time_vec, period = 24)
-head(TR_res)
-
-# Count significant rhythmic genes using BH-adjusted p-values
-sum(TR_res$BH < 0.05, na.rm = TRUE)
-
-# Estimate rhythm parameters
-param_res <- params_output(expr, time_vec, period = 24)
-head(param_res)
-```
-
 ## Main functions
 
 | Function | Purpose | Main input | Output |
