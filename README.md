@@ -81,12 +81,12 @@ head(param_res)
 
 | Function | Purpose | Main input | Output |
 | --- | --- | --- | --- |
-| `preprocess_counts()` | Preprocess RNA-seq count data before rhythm analysis | Raw count matrix | Normalized expression matrix or `edgeR::DGEList` |
 | `TR()` | Test rhythmicity within one condition | Gene-by-sample expression matrix and sampling times | `pvalue`, `BH`, `qvalue` |
 | `TDR()` | Test whether rhythmicity differs across multiple conditions | List of expression matrices and time vectors | `pvalue`, `BH`, `qvalue` |
 | `TDA()` | Test whether rhythm amplitude differs across multiple conditions | List of expression matrices and time vectors | `pvalue`, `BH`, `qvalue` |
 | `TDP()` | Test whether rhythm phase differs across multiple conditions | List of expression matrices and time vectors | `pvalue`, `BH`, `qvalue` |
 | `TDM()` | Test whether mesor differs across multiple conditions | List of expression matrices and time vectors | `pvalue`, `BH`, `qvalue` |
+| `preprocess_counts()` | Preprocess RNA-seq count data before rhythm analysis | Raw count matrix | Normalized expression matrix or `edgeR::DGEList` |
 | `params_output()` | Fit the rhythm model and extract parameters | Expression matrix and sampling times | Mesor, amplitude, phase, SEs, and confidence intervals |
 
 ## Documentation
@@ -94,12 +94,12 @@ head(param_res)
 For more details about each function, see the corresponding help page in R:
 
 ```r
-?preprocess_counts
 ?TR
 ?TDR
 ?TDA
 ?TDP
 ?TDM
+?preprocess_counts
 ?params_output
 ```
 
