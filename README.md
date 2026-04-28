@@ -17,15 +17,6 @@
 
 ## Installation
 
-Install the development version from a local package source directory:
-
-```r
-install.packages("remotes")
-remotes::install_local(".")
-```
-
-If the package is hosted on GitHub, replace `OWNER` with the repository owner:
-
 ```r
 install.packages("remotes")
 remotes::install_github("DrHuang123/Comprehensive-Analyses-of-Circadian-Rhythms-CARhy")
