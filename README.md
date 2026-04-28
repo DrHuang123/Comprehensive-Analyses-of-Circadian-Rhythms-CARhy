@@ -42,7 +42,9 @@ if (!requireNamespace("BiocManager", quietly = TRUE)) {
 BiocManager::install("edgeR")
 ```
 
-The overall workflow of CARhy is shown below.
+## Overview
+
+The logic diagram of CARhy is shown below.
 
 ```mermaid
 flowchart TD
