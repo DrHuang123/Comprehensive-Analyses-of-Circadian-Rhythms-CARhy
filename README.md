@@ -3,17 +3,17 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-**CARhy** (*Comprehensive Analyses of Circadian Rhythms*) is an R package for analyzing circadian rhythms in transcriptomic experiments with one or multiple experimental conditions. It provides functions for rhythmicity testing, differential rhythmicity testing, differential mesor/amplitude/phase testing, rhythm-parameter estimation, and multiple-testing correction.
+**CARhy** (*Comprehensive Analyses of Circadian Rhythms*) is an R package for analyzing circadian rhythms in transcriptomic experiments with multiple experimental conditions. It provides functions for rhythmicity testing, differential rhythmicity testing, differential mesor/amplitude/phase testing, rhythm-parameter estimation, and multiple-testing correction.
 
 ## Features
 
-- Optional RNA-seq count preprocessing using low-expression filtering and TMM normalization via **edgeR**.
 - Test rhythmicity within a single condition.
 - Test differential rhythmicity across multiple conditions.
 - Test differential rhythm amplitude, phase, and mesor across multiple conditions.
 - Estimate mesor, amplitude, phase, standard errors, and confidence intervals.
 - Supports balanced designs, unevenly spaced sampling times, unequal numbers of replicates, and missing values.
 - Reports raw p-values, Benjamini-Hochberg adjusted p-values, and Storey q-values when the **qvalue** package is available.
+- Optional RNA-seq count preprocessing using low-expression filtering and TMM normalization via **edgeR**.
 
 ## Installation
 
@@ -28,7 +28,7 @@ If the package is hosted on GitHub, replace `OWNER` with the repository owner:
 
 ```r
 install.packages("remotes")
-remotes::install_github("OWNER/CARhy")
+remotes::install_github("DrHuang123/Comprehensive-Analyses-of-Circadian-Rhythms-CARhy")
 ```
 
 For optional RNA-seq preprocessing and Storey q-value estimation, install the Bioconductor dependencies:
