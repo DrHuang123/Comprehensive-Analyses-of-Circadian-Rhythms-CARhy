@@ -12,25 +12,34 @@
 - Test differential rhythm amplitude, phase, and mesor across multiple conditions.
 - Estimate mesor, amplitude, phase, standard errors, and confidence intervals.
 - Supports balanced designs, unevenly spaced sampling times, unequal numbers of replicates, and missing values.
-- Reports raw p-values, Benjamini-Hochberg adjusted p-values, and Storey q-values when the **qvalue** package is available.
+- Reports raw p-values, Benjamini-Hochberg adjusted p-values, and Storey q-values.
 - Optional RNA-seq count preprocessing using low-expression filtering and TMM normalization via **edgeR**.
 
 ## Installation
-
-Install the CARhy (Comprehensive Analyses of Circadian Rhythms):
 
 ```r
 install.packages("remotes")
 remotes::install_github("DrHuang123/Comprehensive-Analyses-of-Circadian-Rhythms-CARhy")
 ```
 
-For optional RNA-seq preprocessing and Storey q-value estimation, install the Bioconductor dependencies:
+## Optional packages
+
+If you would like to use Storey q-value estimation, install the **qvalue** package:
 
 ```r
 if (!requireNamespace("BiocManager", quietly = TRUE)) {
   install.packages("BiocManager")
 }
-BiocManager::install(c("edgeR", "qvalue"))
+BiocManager::install("qvalue")
+```
+
+If you would like to use the optional RNA-seq count preprocessing workflow in `preprocess_counts()`, install **edgeR**:
+
+```r
+if (!requireNamespace("BiocManager", quietly = TRUE)) {
+  install.packages("BiocManager")
+}
+BiocManager::install("edgeR")
 ```
 
 ## Quick start
