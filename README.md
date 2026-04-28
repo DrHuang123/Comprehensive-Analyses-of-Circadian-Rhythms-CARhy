@@ -17,6 +17,8 @@
 
 ## Installation
 
+Install the CARhy (Comprehensive Analyses of Circadian Rhythms):
+
 ```r
 install.packages("remotes")
 remotes::install_github("DrHuang123/Comprehensive-Analyses-of-Circadian-Rhythms-CARhy")
@@ -65,29 +67,6 @@ sum(TR_res$BH < 0.05, na.rm = TRUE)
 param_res <- params_output(expr, time_vec, period = 24)
 head(param_res)
 ```
-
-## Input format
-
-For single-condition analysis, use a numeric expression matrix with genes in rows and samples in columns. The sampling-time vector must have the same length as the number of columns in the expression matrix.
-
-```r
-TR(data_list = expr, time_vec = time_vec, period = 24)
-params_output(expr_mat = expr, time_vec = time_vec, period = 24)
-```
-
-For multi-condition analysis, provide a list of condition-specific expression matrices and a matching list of condition-specific sampling-time vectors.
-
-```r
-data_list <- list(condition_1 = expr1, condition_2 = expr2, condition_3 = expr3)
-timepoint_list <- list(condition_1 = time_vec1, condition_2 = time_vec2, condition_3 = time_vec3)
-
-TDR(data_list, timepoint_list, ncond = 3, period = 24)
-TDA(data_list, timepoint_list, ncond = 3, period = 24)
-TDP(data_list, timepoint_list, ncond = 3, period = 24)
-TDM(data_list, timepoint_list, ncond = 3, period = 24)
-```
-
-Use the same gene identifiers and row order across condition-specific matrices when comparing multiple conditions.
 
 ## Main functions
 
