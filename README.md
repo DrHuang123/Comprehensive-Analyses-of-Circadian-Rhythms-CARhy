@@ -42,6 +42,22 @@ if (!requireNamespace("BiocManager", quietly = TRUE)) {
 BiocManager::install("edgeR")
 ```
 
+The overall workflow of CARhy is shown below.
+
+```mermaid
+flowchart TD
+    A["CARhy"]
+
+    A --> B["TR(): Rhythmicity Test<br/>Test whether a gene shows rhythmicity<br/>under a given condition."]
+    A --> C["TDR(): Differential Rhythmicity Test<br/>Test whether a gene shows differential rhythmicity<br/>across multiple conditions."]
+    A --> D["TDM(): Differential Mesor Test<br/>Test whether a gene shows differential mesor<br/>across multiple conditions."]
+
+    B --> E{"Gene is rhythmic<br/>across all conditions?"}
+
+    E -->|Yes| F["TDA(): Differential Amplitude Test<br/>Test whether a gene that shows rhythmicity<br/>across all conditions has differential amplitude<br/>across conditions."]
+    E -->|Yes| G["TDP(): Differential Phase Test<br/>Test whether a gene that shows rhythmicity<br/>across all conditions has differential phase<br/>across conditions."]
+```
+
 ## Quick start
 
 ```r
