@@ -1,0 +1,20 @@
+Package: CARhy
+Type: Package
+Title: Comprehensive Analyses of Circadian Rhythms (CARhy)
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Samiran", "Sinha",
+      email = "sinha@stat.tamu.edu",
+      role = c("aut", "cre")
+    ),
+    person(
+      "Weiyi", "Huang",
+      email = "wy-huang@tamu.edu",
+      role = c("aut")
+    )
+  )
+Description: Provides functions for analyses of circadian rhythms in transcriptomic experiments with multiple conditions, including rhythmicity testing, differential rhythmicity testing, differential mesor/amplitude/phase testing, and multiple-testing correction. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+RoxygenNote: 7.3.3
