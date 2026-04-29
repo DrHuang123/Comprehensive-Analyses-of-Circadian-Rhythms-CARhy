@@ -70,7 +70,7 @@ flowchart TD
 | `TDP()` | Test whether rhythm phase differs across multiple conditions | List of expression matrices and time vectors | `pvalue`, `BH`, `qvalue` |
 | `TDM()` | Test whether mesor differs across multiple conditions | List of expression matrices and time vectors | `pvalue`, `BH`, `qvalue` |
 | `preprocess_counts()` | Preprocess RNA-seq count data before rhythm analysis | Raw count matrix | Normalized expression matrix or `edgeR::DGEList` |
-| `params_output()` | Output rhythm parameters | Expression matrix and sampling times | Mesor, amplitude, phase, SEs, and confidence intervals |
+| `params_output()` | Output rhythm parameters | Expression matrix and sampling times | Mesor, amplitude, phase, and confidence intervals |
 
 ## Documentation
 
