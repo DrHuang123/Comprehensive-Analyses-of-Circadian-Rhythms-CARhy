@@ -98,6 +98,7 @@ If you use CARhy, please cite:
   journal={arXiv preprint arXiv:2604.26765},
   year={2026}
 }
+```
 
 ## License
 
