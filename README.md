@@ -86,19 +86,11 @@ For more details about each function, see the corresponding help page in R:
 ?params_output
 ```
 
-````markdown
 ## Citation
 
 If you use CARhy, please cite:
 
-```bibtex
-@article{huang2026carhy,
-  title={CARhy: Comprehensive Analyses of Circadian Rhythms in Transcriptomic Experiments with Multiple Conditions},
-  author={Huang, W. and Menet, J. S. and Sinha, S.},
-  journal={arXiv preprint arXiv:2604.26765},
-  year={2026}
-}
-```
+Huang, W., Menet, J. S., & Sinha, S. (2026). CARhy: Comprehensive Analyses of Circadian Rhythms in Transcriptomic Experiments with Multiple Conditions. arXiv preprint arXiv:2604.26765.
 
 ## License
 
