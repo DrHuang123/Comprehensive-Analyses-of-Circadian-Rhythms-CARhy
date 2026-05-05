@@ -86,6 +86,7 @@ For more details about each function, see the corresponding help page in R:
 ?params_output
 ```
 
+````markdown
 ## Citation
 
 If you use CARhy, please cite:
