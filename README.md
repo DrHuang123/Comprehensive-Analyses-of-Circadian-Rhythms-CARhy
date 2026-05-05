@@ -89,8 +89,9 @@ For more details about each function, see the corresponding help page in R:
 ## Citation
 
 If you use CARhy, please cite:
-
-Huang, W., Menet, J., and Sinha, S. (2026). *CARhy: Comprehensive Analyses of Circadian Rhythms in Transcriptomic Experiments with Multiple Conditions.*
+Huang, W., Menet, J. S., & Sinha, S. (2026).  
+**CARhy: Comprehensive Analyses of Circadian Rhythms in Transcriptomic Experiments with Multiple Conditions.**  
+*arXiv preprint arXiv:2604.26765.*
 
 ## License
 
